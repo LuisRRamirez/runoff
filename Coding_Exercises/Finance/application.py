@@ -119,6 +119,18 @@ def quote():
 
 @app.route("/register", methods=["GET", "POST"])
 def register():
+    # User reached route via POST (as by submitting a form via POST)
+    if request.method == "POST":
+
+        # if not request.form.get("username"):
+        #     return apology("must provide username", 403)
+
+        rows = db.execute("SELECT * FROM users WHERE username = ?", request.form.get("username"))
+
+        if len(rows) != 1:
+            return apology("username already exists",409)
+
+
     """Register user"""
     return render_template("register.html")
 
