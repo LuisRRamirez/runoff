@@ -1,34 +1,30 @@
 {% extends "layout.html" %}
 
 {% block title %}
-    Log In
+    Register
 {% endblock %}
 
 {% block main %}
     <form action="/register" method="post">
-    <div class="card mx-auto" style="width: 18rem;">
-        <div class="card-body">
-        <div class="card-title">
-        <h5 class="card-title">Register</h5>
-        <br>
+        <div class="card mx-auto" style="width: 18rem;">
+            <div class="card-body">
+            <div class="card-title">
+            <h5 class="card-title">Register</h5>
+            <br>
         <div class="form-group">
             <label for="Username">Username</label>
-            <input autocomplete="off" autofocus class="form-control" id="username" placeholder="Enter Username" type="text">
+            <input autocomplete="off" autofocus class="form-control" name="username" placeholder="Username" type="text">
         </div>
         <div class="form-group">
-            <label for="exampleInputPassword1">Password</label>
-            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Enter Password">
+            <label for="Password">Password</label>
+            <input autocomplete="off" autofocus class="form-control" name="password" placeholder="Password" type="password">
             <small id="passwordHelp" class="form-text text-muted">We'll never share your password with anyone else.</small>
         </div>
         <div class="form-group">
-            <label for="exampleInputPassword1">Re-enter Password</label>
-            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Confirmation">
+            <label for="Confirmation">Re-enter Password</label>
+            <input autocomplete="off" autofocus class="form-control" name="confirmation" placeholder="Confirmation" type="password">
         </div>
-        <div class="form-check">
-            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-            <label class="form-check-label" for="exampleCheck1">Check me out</label>
-        </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button class="btn btn-primary" type="submit">Submit</button>
         </div>
         </div>
         </div>
